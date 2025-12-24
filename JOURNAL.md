@@ -46,4 +46,7 @@ So now, my basic idea of components for now.
 
 This is the proof of concept schematic i've arrived at now. https://imgur.com/a/sionhMd
 
-For the MCU, i chose the ESP32-S3 because of its builtin USB HID and serial USB controller, less components on the board. As i mentioned before, i will be working with the AT42QT1010 capacitive sensor.
+For the MCU, i chose the ESP32-S3 because of its builtin USB HID and serial USB controller, less components on the board; As i mentioned before, i will be working with the AT42QT1010 capacitive sensor; Plus regular USB-C port for charging and data transfer, being it either firmware updates, or sending data up to your favorite timer app; Audio jack; I still haven't decided on battery size / capacity since i have no expectation of current draw, so i can't really estimate a battery size, but i will be using a famous battery charging IC, the [BQ24074](https://www.ti.com/product/BQ24074). That's gonna be my "beta" of the project. Like any project, changes are to be expected, being such changes big or small, either i discover one of these components are NRND, not available at LCSC, or i just wake up the next day with an urge to revamp EVERYTHING.
+
+
+
