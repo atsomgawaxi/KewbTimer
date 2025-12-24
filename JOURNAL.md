@@ -1,5 +1,5 @@
 # 24 Dec - Official Start
-Spent time: (notas, deletar depois: tempo do cronometro + 2 horas)
+Spent time: 3h 40m
 
 Hello! Atsom here again with another project that has potential to get abandoned/unfinished!! Decided to speedrun a project in the last week of Blueprint (i ended up procrastinating too long)
 
