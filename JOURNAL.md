@@ -1,5 +1,5 @@
 # 24 Dec - Official Start
-Spent time: 3h 40m
+**Spent time: 3h 40m**
 
 Hello! Atsom here again with another project that has potential to get abandoned/unfinished!! Decided to speedrun a project in the last week of Blueprint (i ended up procrastinating too long)
 
@@ -48,5 +48,24 @@ This is the proof of concept schematic i've arrived at now. https://imgur.com/a/
 
 For the MCU, i chose the ESP32-S3 because of its builtin USB HID and serial USB controller, less components on the board; As i mentioned before, i will be working with the AT42QT1010 capacitive sensor; Plus regular USB-C port for charging and data transfer, being it either firmware updates, or sending data up to your favorite timer app; Audio jack; I still haven't decided on battery size / capacity since i have no expectation of current draw, so i can't really estimate a battery size, but i will be using a famous battery charging IC, the [BQ24074](https://www.ti.com/product/BQ24074). That's gonna be my "beta" of the project. Like any project, changes are to be expected, being such changes big or small, either i discover one of these components are NRND, not available at LCSC, or i just wake up the next day with an urge to revamp EVERYTHING.
 
+# 25 Dec 
+**Spent time: 5h 8m**
 
+Okay. Working this schematic out is definitely something. I'm using M5Stack's schematics for inspiration and now i am *very* confused.
+
+Check out this image, it's the power schematic of M5Stack's M5StickC Plus2: https://imgur.com/a/fMYvUwt
+
+I'm trying to work on power stuff right now, because obviously, if there's no power, then there are no peripherals, then no working device.
+I've also decided to change battery chargers, and use the one in the schematic, since it is a way smaller and simpler IC that should do the job.
+
+Notice the battery charger circuit on the top left. Especially the BAT pin. They have this weird undocumented transistor switching everything, so now i don't know if i just smack a random MOSFET on it's place. It's my first time messing with battery/battery charging stuff.
+
+I decided to use a P-Channel MOSFET, like the one i mentioned, to control everything, since i think i could overload the battery charger if i just directly connected everything. Like the schematic, i connected source to the BAT pin, drain to the load, and gate to a pulldown resistor + 5V input.
+
+It's coming out to look like this: https://imgur.com/a/sWPJO73
+
+I am really NOT confident whether this will work or not. When i do submit this, it's just gonna be prototype and pray at this point.
+So i decided to just boost 5V from the battery and use regulators + 22uF capacitors to get 3.3V, if i go the step-down way, i won't get this done in a week 😭
+
+"Finished" the power, and i am going to stop for today. It is now 4AM. I hope peripherals and other stuff turn out to be easier than power.
 
